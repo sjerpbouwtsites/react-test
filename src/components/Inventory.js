@@ -67,7 +67,7 @@ class Inventory extends React.Component {
     const authProvider = new firebase.auth.GithubAuthProvider()
     firebaseApp
       .auth()
-      .signInWithPopup(authProvider)
+      .signInWithRedirect(authProvider)
       .then(this.authHandler)
       .catch(error => {
         alert('aith error!')
